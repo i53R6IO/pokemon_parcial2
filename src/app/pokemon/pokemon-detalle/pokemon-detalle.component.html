@@ -1,10 +1,16 @@
 <div class="card" style="width: 18rem;">
-  <div onselect="let pokemon of poke">
-  <img src="..." class="card-img-top" alt="...">
+  <div *onselect="let pokemon of poke">
+  <img src="{{pokemon.sprites.front_default}}" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">{{pokemon.name}}</h5>
+    <h5 class="card-title"></h5>
+    <h5 class="card-title">{{pokemon.height}}</h5>
+    <h5 class="card-title">{{pokemon.weight}}</h5>
+    <h5 class="card-title" let types of {{pokemon.types}}>{{pokemon.types}}</h5>
+    <p class="card-text">{{pokemon.id}}</p>
+    <p class="card-text">{{pokemon.height}}</p>
+    <p class="card-text">{{pokemon.weight}}</p>
+    <p class="card-text"let types of {{pokemon.types}}>{{pokemon.types}}</p>
   </div>
   </div>
 </div>

@@ -13,7 +13,6 @@ export class PokemonListarComponent implements OnInit {
   poke : Array<PokemonDetailDto> = [];
   selected = false;
   
-
   getpokemons() {
     return this.poke = this.pokemonService.getPokemons();
   }
@@ -21,9 +20,8 @@ export class PokemonListarComponent implements OnInit {
   ngOnInit() {
     this.getpokemons();
   }
-
+  
   onSelected(){
-    
   }
 
 }
